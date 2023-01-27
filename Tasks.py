@@ -22,7 +22,6 @@ def get_inductees(names: list, birthday_years: list, genders: list) -> list:
             student_age = 2021 - birthday_years[i]
             if student_age >= 17 and student_age < 30:
                 inductees.append(names[i])
-    # в ТЗ не сказано вывести отдельно, а не возвратить
     print(f"unidentified_persons: {unidentified_persons}")
     return inductees
  
