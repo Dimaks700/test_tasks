@@ -1,6 +1,6 @@
-# get the current price on binance, compare the current price of the xrp-usdt pair with 
-# the highest xrp price in the last hour and, if it has fallen by 1%, output a message 
-# to the terminal
+# get the current price on binance, compare the current price of the 
+# xrp-usdt pair with the highest xrp price in the last hour and, if 
+# it has fallen by 1%, output a message to the terminal
 from os import getenv 
 from dotenv import load_dotenv
 from binance import Client
@@ -17,7 +17,7 @@ klines = client.get_historical_klines(
     )
 highest_price = max([float(i[2]) for i in klines])
 
-while(True):
+while True:
     current_candle_max_price = float(client.get_klines(
         symbol='XRPUSDT', interval=Client.KLINE_INTERVAL_1MINUTE
         )[-1][4])
